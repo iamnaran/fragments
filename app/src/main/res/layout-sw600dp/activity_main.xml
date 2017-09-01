@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    tools:context="com.example.android.android_me.ui.MainActivity">
+
+    <!--
+    This layout is a two-pane layout for the master/detail flow.
+    -->
+
+    <!-- The static MasterListFragment -->
+    <fragment
+        android:id="@+id/master_list_fragment"
+        android:name="com.example.android.android_me.ui.MasterListFragment"
+        android:layout_width="300dp"
+        android:layout_height="match_parent" />
+
+    <!-- A small divider -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray" />
+
+    <!-- LinearLayout that arranges all three Android-Me body part images vertically -->
+    <LinearLayout
+        android:id="@+id/android_me_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <!-- Three vertically arranged body part fragments - the frame layouts are containers -
+        one for each Android-Me part (head, body, legs) -->
+
+        <FrameLayout
+            android:id="@+id/head_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"/>
+
+        <FrameLayout
+            android:id="@+id/body_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"/>
+
+        <FrameLayout
+            android:id="@+id/leg_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
